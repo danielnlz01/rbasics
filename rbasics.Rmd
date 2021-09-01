@@ -1,0 +1,78 @@
+---
+title: "rbasics"
+author: "dnzlz"
+date: "3/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ejercicios de intro a R
+
+Esto es una intro a R y sus componentes básicos:
+
+```{r}
+print("Hello World!")
+```
+
+```{r}
+edad <- 20
+print(13 %% 2) #comentario
+```
+
+```{r}
+
+suma <- function(x, y)
+{
+  return (x + y) #si no se escribe return, regresa el último procedimiento
+  x
+}
+
+print(suma(2, 3))
+```
+
+```{r}
+numeros <- 1:10
+print (numeros)
+for (dato in numeros)
+{
+  print(dato * 2)
+}
+```
+
+```{r}
+abundante <- function(numero)
+{
+suma <- 0
+  maximo <- numero -1
+  for(i in 1:maximo){
+    if( (numero %% i) == 0){
+      suma <- suma + i
+    }
+  }
+  print(suma)
+  if(suma > numero){
+    return( TRUE)
+  }else{
+    return(FALSE)
+  }
+}
+
+print(abundante(12))
+```
+
+```{r}
+ejercicio3 <- function(n)
+{
+  suma <- 0
+  for (i in 0:n)
+  {
+    suma <- suma + (2 ^ i)
+  }
+  suma
+}
+print(ejercicio3(3))
+```
+
